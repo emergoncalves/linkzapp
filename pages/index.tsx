@@ -23,7 +23,7 @@ export default function Home() {
       <div className="flex flex-col gap-3">
         <h1 className='text-3xl text-indigo-600 text-center font-semibold'>LinkZapp</h1>
         <div className="p-3 border border-solid border-indigo-600 rounded-md bg-white">
-          <InputMask mask={cellphone.replaceAll('_', '').length < 11 ? "(099) 9999-9999" : "(099) 99999-9999"} className="text-center outline-none focus:ring-violet-300 w-full" autoComplete="off" type="tel" onInput={(e) => handleInputCellphone(e.target.value)} placeholder="(DDD) 99999-9999" name="cellphone" value={cellphone}></InputMask>
+          <InputMask mask={cellphone.replaceAll('_', '').length < 11 ? "(099) 9999-9999" : "(099) 99999-9999"} className="text-center outline-none focus:ring-violet-300 w-full" autoComplete="off" type="tel" onInput={(e) => handleInputCellphone((e.target as HTMLInputElement).value)} placeholder="(DDD) 99999-9999" name="cellphone" value={cellphone}></InputMask>
         </div>
           <div className="my-3">
             <div className="flex gap-4 md:gap-2 justify-center">
